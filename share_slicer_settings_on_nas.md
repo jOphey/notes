@@ -59,6 +59,8 @@ cd %appdata%
 ```
 mklink /d "%appdata%\OrcaSlicer" "\\nas\slicerconfig"
 ```
+Dies erzeugt einen sogenannten "Symbolischen Link". Es wird ein neues, "virtuelles" Verzeichnis "OrcaSlicer" angelegt, aber anstatt den Inhalt auf der lokalen Festplatte zu suchen, werden alle Dateizugriff innerhalb dieses Verzeichnisses auf den Netzwerkpfad "\\nas\slicerconfig" umgeleitet, so dass ab sofort die Config von der Netzwerkfreigabe geladen wird.
+
 Zu diesem Zeitpunkt solltest du deinen Slicer wieder wie gewohnt auf dem soeben umkonfigurierten Rechner nutzen können.
 
 ## Konfiguration der weiteren Rechner
