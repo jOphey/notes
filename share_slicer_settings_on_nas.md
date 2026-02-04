@@ -49,17 +49,17 @@ Stelle sicher, dass du im Windows-Explorer den Pfad `\\nas\slicerconfig` aufrufe
 ## Backup der Haupt-Slicer-Config und Übertragen der Config auf das NAS
 1. Schließe deinen Slicer, sofern er geöffnet ist.
 2. Öffne einen Windows-Explorer und gib in die Adresszeile `%appdata%` ein. Der Explorer springt in den Ordner, wo Anwendungen ihre Config-Dateien ablegen.
-3. Suche hier nach dem Verzeichnis deines Slicers. Das ist z.B. `PrusaSlicer` oder `OrcaSlicer`. Im folgenden wird in dieser Anleitung von OrcaSlicer ausgegangen und ist dementsprechend bei den Befehlen zu ersetzen.
+3. Suche hier nach dem Verzeichnis deines Slicers. Das ist z.B. `PrusaSlicer` oder `OrcaSlicer`. Im folgenden wird in dieser Anleitung von OrcaSlicer ausgegangen und ist im abweichenden Fall entsprechend bei den Befehlen zu ersetzen.
 4. Bennene das Verzeichnis `OrcaSlicer` nach `OrcaSlicer.backup` um. Falls im folgenden etwas schief läuft hast du so eine Sicherung von deinen Profilen.
 5. Kopiere den Inhalt (also nicht das Verzeichnis selbst) von `OrcaSlicer.backup` in die Netzwerkfreigabe `\\nas\slicerconfig`
-6. Öffne eine Kommandozeile und gebe folgende 2 Befehle ein:
+6. Öffne eine Kommandozeile und gebe die folgenden 2 Befehle ein:
 ```
 cd %appdata%
 ```
 ```
 mklink /d "%appdata%\OrcaSlicer" "\\nas\slicerconfig"
 ```
-Zu diesem Zeitpunkt solltest du deinen Slicer wieder wie gewohnt auf dem grade umkonfigurierten Rechner nutzen können.
+Zu diesem Zeitpunkt solltest du deinen Slicer wieder wie gewohnt auf dem soeben umkonfigurierten Rechner nutzen können.
 
 ## Konfiguration der weiteren Rechner
 Auf jedem weiteren Rechner, der die Config mit nutzen soll, sind folgende Schritte auszuführen:
